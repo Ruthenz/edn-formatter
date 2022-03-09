@@ -1,12 +1,11 @@
 import { useRef } from 'react';
 import { json, jsonParseLinter } from '@codemirror/lang-json';
-import { EDN as edn } from '@codemirror/lang-clojure-map';
+import { edn, ednParseLinter } from '@codemirror/lang-edn';
+import EDN from 'edn-parser';
 // import { StreamLanguage } from '@codemirror/stream-parser';
 // import { clojure } from '@codemirror/legacy-modes/mode/clojure';
 
 import CodeArea, { CodeAreaRef } from '../CodeArea/CodeArea';
-
-import EDN from '../../utils/EDN';
 
 import './App.css';
 
@@ -51,6 +50,7 @@ const App: React.FC = () => {
       <CodeArea 
         ref={ednRef}
         title={'EDN'}
+        linter={ednParseLinter()}
         format={(text) => EDN.stringify(EDN.parse(text), { spaces: 2 }) ?? ''}
         compress={EDN.compress}
         extensions={[edn()]}
@@ -58,7 +58,5 @@ const App: React.FC = () => {
     </div>
   );
 }
-
-// extensions={[StreamLanguage.define(clojure)]}
 
 export default App;

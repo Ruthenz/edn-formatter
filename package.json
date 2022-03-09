@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@codemirror/lang-clojure-map": "file:../lang-example",
+    "@codemirror/lang-edn": "file:../lang-example",
     "@codemirror/lang-json": "^0.19.2",
     "@codemirror/legacy-modes": "^0.19.0",
     "@codemirror/lint": "^0.19.3",
@@ -17,6 +17,7 @@
     "@types/react": "^17.0.20",
     "@types/react-dom": "^17.0.9",
     "@uiw/react-codemirror": "^4.4.3",
+    "edn-parser": "^0.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
