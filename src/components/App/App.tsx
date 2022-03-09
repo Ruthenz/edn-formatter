@@ -1,9 +1,7 @@
 import { useRef } from 'react';
 import { json, jsonParseLinter } from '@codemirror/lang-json';
-import { edn, ednParseLinter } from '@codemirror/lang-edn';
+import { edn, ednParseLinter } from 'codemirror-lang-edn';
 import EDN from 'edn-parser';
-// import { StreamLanguage } from '@codemirror/stream-parser';
-// import { clojure } from '@codemirror/legacy-modes/mode/clojure';
 
 import CodeArea, { CodeAreaRef } from '../CodeArea/CodeArea';
 
